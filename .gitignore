@@ -1,0 +1,36 @@
+# secrets & environment
+.env
+*.env
+backend/.env
+frontend/.env
+ai_model/.env
+
+# python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# node
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/src_backup/
+.npm
+.eslintcache
+
+# system & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ML datasets (never commit large raw datasets)
+ai_model/data/
+data/
+*.h5.bak

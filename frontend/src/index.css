@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #F7FAF5;
+    color: #17251C;
+  }
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Custom micro-animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.88; transform: scale(0.985); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Subtle scanning beam for agricultural AI diagnostics */
+@keyframes scan-beam {
+  0% { transform: translateY(-100%); opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { transform: translateY(400%); opacity: 0.8; }
+}
+
+.animate-scan-beam {
+  animation: scan-beam 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Radar scan rotation */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+/* =========================================
+   APPROVED BOTANICAL DESIGN SYSTEM STYLES
+   ========================================= */
+
+/* Results Page: Soft Sage-Green & Mint Gradient Background */
+.results-botanical-bg {
+  background: radial-gradient(circle at 10% 20%, #EEF6F0 0%, #E2EDE4 50%, #D4E5D8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Homepage Hero: Deep Forest-Green Canopy Background */
+.hero-forest-bg {
+  background: radial-gradient(circle at 80% 20%, #155831 0%, #0D321E 40%, #07190F 100%);
+  position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+/* Low-Opacity Botanical Leaf Silhouettes (Pointer-events: none ensures 0 interaction blocking) */
+.botanical-leaves-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 600px;
+  pointer-events: none;
+  opacity: 0.16;
+  z-index: 0;
+  transform: translate(-10%, -5%);
+}
+
+.botanical-leaves-right {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 440px;
+  height: 680px;
+  pointer-events: none;
+  opacity: 0.15;
+  z-index: 0;
+  transform: translate(15%, -5%);
+}
+
+.botanical-leaves-hero-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 600px;
+  pointer-events: none;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+/* Custom cards and surfaces */
+.agro-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8E0;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px -2px rgba(20, 83, 45, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agro-card:hover {
+  box-shadow: 0 10px 25px -4px rgba(20, 83, 45, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Tinted Sage Diagnosis Cards */
+.agro-card-sage {
+  background-color: #FFFFFF;
+  border: 1px solid #D4E5D8;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 32px -8px rgba(20, 83, 45, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agro-card-sage:hover {
+  box-shadow: 0 14px 38px -6px rgba(20, 83, 45, 0.11), 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.agro-card-dark {
+  background-color: #0B1F17;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 1.5rem;
+  color: #FFFFFF;
+}
+
+/* Confidence Botanical Gradient Progress Fill */
+.confidence-botanical-fill {
+  background: linear-gradient(90deg, #16A34A, #22C55E);
+}
+
+/* Custom glassmorphism utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 224, 0.85);
+}
+
+.glass-panel-dark {
+  background: rgba(11, 31, 23, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
