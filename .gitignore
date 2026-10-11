@@ -23,6 +23,8 @@ frontend/build/
 frontend/src_backup/
 .npm
 .eslintcache
+.vite/
+*.vite
 
 # system & IDE
 .DS_Store
